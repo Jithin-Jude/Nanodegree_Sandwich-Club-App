@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.udacity.sandwichclub.model.Sandwich;
 import com.udacity.sandwichclub.utils.JsonUtils;
@@ -26,7 +27,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        ImageView ingredientsIv = findViewById(R.id.image_iv);
+         final ImageView ingredientsIv = findViewById(R.id.image_iv);
          integrated = findViewById(R.id.ingredients_tv);
          description = findViewById(R.id.description_tv);
          placeoforgin = findViewById(R.id.origin_tv);
@@ -56,8 +57,13 @@ public class DetailActivity extends AppCompatActivity {
         }
 
         populateUI();
+
         Picasso.with(this)
                 .load(sandwich.getImage())
+                .placeholder(this.getResources()
+                        .getDrawable(R.drawable.ic_error_outline_black_720dp))
+                .error(this.getResources()
+                        .getDrawable(R.drawable.ic_error_outline_black_720dp))
                 .into(ingredientsIv);
 
         setTitle(sandwich.getMainName());
@@ -69,8 +75,8 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void populateUI() {
-        alsoKnownAs.setText(TextUtils.join(", ", sandwich.getAlsoKnownAs()));
-        integrated.setText(TextUtils.join(", ", sandwich.getIngredients()));
+        alsoKnownAs.setText(TextUtils.join("\n", sandwich.getAlsoKnownAs()));
+        integrated.setText(TextUtils.join("\n", sandwich.getIngredients()));
         description.setText(sandwich.getDescription());
         placeoforgin.setText(sandwich.getPlaceOfOrigin());
 
