@@ -23,6 +23,10 @@ Populate all fields in the layout accordingly
 ## UI/UX
 ![screenshots-sandwitch-club](https://user-images.githubusercontent.com/20029287/46324804-f95af980-c612-11e8-8381-1e8109c121fd.jpg)
 
+## Udacity Review
+![sandwitch-club_review](https://user-images.githubusercontent.com/20029287/46326454-61f9a480-c61a-11e8-8e3a-8650aaed9c09.JPG)
+
+## License
 ```
 MIT License
 
