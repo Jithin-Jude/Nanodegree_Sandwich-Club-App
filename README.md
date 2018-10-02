@@ -1,3 +1,6 @@
+[![Scholarship Google](https://img.shields.io/badge/scholarship-Google-brightgreen.svg)](https://in.udacity.com/google-india-scholarships)
+[![Udacity Nanodegree](https://img.shields.io/badge/Udacity-Nanodegree-blue.svg)](https://in.udacity.com/course/android-developer-nanodegree-by-google--nd801)
+
 ![banner](https://user-images.githubusercontent.com/20029287/46324719-881b4680-c612-11e8-92b6-5bb5882b2abd.jpg)
 
 # Sandwich Club Project
